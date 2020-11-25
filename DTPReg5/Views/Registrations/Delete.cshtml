@@ -1,0 +1,80 @@
+﻿@model DTPReg5.Models.Registration
+
+@{
+    ViewBag.Title = "Видалити";
+}
+
+<h2>Видалити</h2>
+
+<h3>Ви впевнені, що хочете видалити це?</h3>
+<div>
+    <h4>Порушення</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NPos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NPos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marka_Auto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marka_Auto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nomer_Auto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nomer_Auto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Por)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Por)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Видалити" class="btn btn-default" /> |
+            @Html.ActionLink("Повернутися до списку порушень", "Index")
+        </div>
+    }
+</div>

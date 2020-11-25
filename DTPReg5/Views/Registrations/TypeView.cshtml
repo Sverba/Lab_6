@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DTPReg5.Models.Type>
+@{
+    ViewBag.Title = "Каталог правопорушень";
+}
+<h2>Тип правопорушення</h2>
+<table>
+    <tr>
+        <th>Назва</th>
+        <th>Покарання</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Punishment)
+            </td>
+        </tr>
+            }
+    </table>
+<div>
+    @Html.ActionLink("Повернутися до списку порушень", "Index")
+</div>
+
+
